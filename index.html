@@ -6,337 +6,55 @@
     <title>The Gazette !!</title>
     <link rel="icon" type="image/x-icon" href="https://files.catbox.moe/872uti.png" />
    
-    <script>
-        window.location.hash = "homepage";
-    </script>
-    <script>
-        const fullTitle = "The Gazette !!";
-        let index = 0;
-        function typeTitle() {
-            if (index <= fullTitle.length) {
-                document.title = fullTitle.substring(0, index);
-                index++;
-            } else {
-                index = 0;
-            }
-        }
-        setInterval(typeTitle, 200);
-    </script>
+    
+    
 
-<style>
-
-
-:root{
---page-bg:#B7CCE6;
---secondary-blue:#5B6B91;
---primary-blue:#181C3E;
---tan:#dcd7cc;
---pink:#FFC7D5;
-}
-
-
-
-@font-face { font-family: 'catfiles'; src: url('https://files.catbox.moe/6sxg9g.ttf') format('TrueType'); }
-@font-face { font-family: 'Reach-Story'; src: url('https://files.catbox.moe/czkr1m.ttf') format('TrueType'); }
-@font-face { font-family: 'porkys'; src: url('https://files.catbox.moe/k3akma.TTF') format('TrueType'); }
-
-
-
-  ::selection {
-  background: transparent;
-  color: var(--pink);
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 0 3px 3px 0;
-}
-
-::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 5px;
-}
-
-
-body{
-margin:0;
-font-family:'Reach-Story';
-background:var(--page-bg);
-color:var(--primary-blue);
-}
-.page{
-width:1200px;
-margin:auto;
-}
-
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-position:relative;
-}
-
-/* nav links container */
-
-.nav-left{
-position:relative;
-z-index:2;
-}
-
-/* nav links */
-
-.nav-left a{
-margin-right:20px;
-padding:10px 20px;
-font-weight:bold;
-font-family:'catfiles';
-font-size:25px;
-cursor:pointer;
-color:var(--primary-blue);
-text-decoration:none;
-border-radius:20px;
-position:relative;
-}
-
-/* hover text color */
-
-.nav-left a:hover{
-color:var(--tan);
-}
-
-/* active tab text color */
-
-.nav-left a.active{
-color:var(--pink);
-}
-
-/* right side */
-
-.nav-right{
-display:flex;
-align-items:center;
-gap:20px;
-}
-
-.nav-highlight{
-position:absolute;
-height:80px;
-background:var(--primary-blue);
-border-radius:20px;
-
-top:100px;
-left:0;
-width:0;
-
-transition:
-top .35s ease,
-left .35s ease,
-width .35s ease;
-
-z-index:0;
-}
-
-
-.search{
-display:flex;
-align-items:center;
-background:var(--primary-blue);
-color:var(--tan);
-padding:5px 10px;
-border-radius:15px;
-font-family: 'porkys';
-font-size: 20px;
-}
-
-.search input{
-border:none;
-margin-left:10px;
-background:var(--tan);
-border-radius:6px;
-height:20px;
-}
-
-.logo{
-width:100px;
-height:100px;
-border-radius:50%;
-background:var(--tan);
-border:4px solid var(--primary-blue);
-
-position:absolute;
-top:20px;
-right:20px;
-}
-
-/* SECTIONS */
-
-.section{
-display:none;
-}
-
-.section.active{
-display:block;
-}
-
-/* EVENT */
-
-.event{
-background:var(--primary-blue);
-color:var(--tan);
-padding:40px;
-border-radius:25px;
-position:relative;
-
-}
-
-.event h2 {
-  font-family: 'catfiles';
-}
-
-.slider{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-}
-
-.slider div{
-width:70px;
-height:6px;
-background:var(--tan);
-border-radius:5px;
-}
-
-/* NEWS */
-
-.news-section{
-display:flex;
-gap:40px;
-margin-top:40px;
-}
-
-.news-left{
-flex:2;
-}
-
-.news-left h2 {
-  font-family: 'catfiles';
-}
-
-.news-box{
-background:var(--primary-blue);
-color:var(--tan);
-height:150px;
-padding:30px;
-border-radius:20px;
-}
-
-.news-right{
-flex:1;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-
-.side-bar{
-background:var(--primary-blue);
-color:var(--tan);
-padding:30px;
-text-align:center;
-border-radius:25px;
-}
-
-/* ISSUES PAGE */
-
-.issues-container{
-background:var(--primary-blue);
-padding:30px;
-border-radius:25px;
-}
-
-#issues h2 {
-  font-family: 'catfiles';
-  font-size:; 15px;
-}
-
-.featured{
-display:flex;
-gap:20px;
-background:var(--tan);
-padding:20px;
-border-radius:20px;
-margin-bottom:20px;
-}
-
-.featured h1 {
-font-family: 'catfiles';
-font-size:; 25px;  
-}
-
-.featured-img{
-width:190px;
-height:190px;
-background:var(--page-bg);
-border-radius:15px;
-border: 7px solid var(--primary-blue);
-}
-
-.featured-meta{
-display:flex;
-gap:40px;
-margin-top:10px;
-}
-
-.story-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.story-card{
-background:var(--tan);
-padding:10px;
-border-radius:15px;
-display:flex;
-gap:20px;
-align-items:center;
-}
-
-.story-img{
-width:120px;
-height:120px;
-background:var(--page-bg);
-border-radius:10px;
-border: 5px solid var(--primary-blue);
-flex-shrink:0;
-}
-
-/* ARTICLE PAGE */
-
-.article-container{
-background:var(--primary-blue);
-padding:40px;
-border-radius:25px;
-}
-
-.article-box{
-background:var(--tan);
-padding:30px;
-border-radius:20px;
-min-height:400px;
-}
-
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <div id="wrap">
+<div id="leftbar" class="sides">
+  <div class="ads">
+    <div class="outer one" >
+    <div class="header">
+    <button class="red" onclick="closead()">  </button>
+    <button class="yellow"></button>
+    <button class="green"></button>
+    <div class="title">text</div></div>
+    <div class="inner one">
+      <img height="100%" width="100%" src="https://files.catbox.moe/zfiyp9.png" alt="example ads">
+    </div>
+    </div>
+</div>
+
+  <div class="ads">
+    <div class="outer two" >
+    <div class="header">
+    <button class="red" onclick="closead()">  </button>
+    <button class="yellow"></button>
+    <button class="green"></button>
+    <div class="title">text</div></div>
+    <div class="inner two">
+      <img height="100%" width="100%" src="https://files.catbox.moe/idk6ao.png" alt="example ads">
+    </div>
+    </div>
+</div>
+
+  <div class="ads">
+    <div class="outer three" >
+    <div class="header">
+    <button class="red" onclick="closead()">  </button>
+    <button class="yellow"></button>
+    <button class="green"></button>
+    <div class="title">text</div></div>
+    <div class="inner three">
+      <img height="100%" width="100%" src="https://files.catbox.moe/c547gq.png" alt="example ads">
+    </div>
+    </div>
+</div>
+</div>
+
 
 <div class="page">
 
@@ -369,9 +87,10 @@ min-height:400px;
 
 <div class="event">
 <div class="logo"></div>
-<h2>UPCOMING EVENT</h2>
-<p>Details for event</p>
-
+<div class="event-info">
+  <h2>UPCOMING EVENT</h2>
+  <p>Details for event</p>
+</div>
 <div class="slider">
 <div></div>
 <div></div>
@@ -487,21 +206,42 @@ text
 
 
 <!-- ARTICLE PAGE -->
-
 <section id="article" class="section">
+  <div class="article-box">
 
-<div class="article-container">
-
-<div class="article-box">
-
+<div class="article-tab">
 <h1>Article Name</h1>
+<div class="meta">
+<span>Written by :</span>
+<span>Date</span>
+</div>
+</div>
 
-<p><b>Written by:</b> Author</p>
-<p><b>Date:</b> Date</p>
+<div class="article-content">
+<p>text</p>
+</div>
 
-<p>
-text
-</p>
+</div>
+</section>
+<!--CLUBS PAGE -->
+
+<section id="clubs" class="section">
+
+<div class="clubs-container">
+
+<div class="clubs-top">
+
+<div class="clubs-tab">NAME</div>
+
+<div class="clubs-box"></div>
+
+</div>
+
+<div class="clubs-bottom">
+
+<div class="clubs-tab small">All Clubs</div>
+
+<div class="clubs-list"></div>
 
 </div>
 
@@ -509,85 +249,161 @@ text
 
 </section>
 
+<!--CALENDAR PAGE -->
+<section id="calendar" class="section">
+  <div class="cal-container">
+
+    <div class="calendar-card">
+
+      <div class="calendar-left">
+        <div class="num-date" id="selected-date">1</div>
+
+        <div class="current-events">
+          Current Events
+          <ul id="event-list"></ul>
+        </div>
+      </div>
+
+      <div class="calendar-base">
+
+        <div class="year">2026</div>
+
+        <div class="months">
+          <span class="triangle-left" onclick="changeMonth(-1)"></span>
+          <strong id="month-label">Apr</strong>
+          <span class="triangle-right" onclick="changeMonth(1)"></span>
+        </div>
+
+        <hr class="month-line" />
+
+        <div class="days">
+          <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+        </div>
+
+        <div class="num-dates" id="dates"></div>
+
+        <div id="active-dot" class="active-dot"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!--TEAM PAGE -->
+
+<section id="team" class="section">
+
+<div class="team-container">
+
+<div class="team-grid">
+
+<div class="member">
+<div class="img"></div>
+<h3>NAME LNAME</h3>
+<p>Role</p>
+<ul>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+</ul>
+</div>
+
+<div class="member">
+<div class="img"></div>
+<h3>NAME LNAME</h3>
+<p>Role</p>
+<ul>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+</ul>
+</div>
+
+<div class="member">
+<div class="img"></div>
+<h3>NAME LNAME</h3>
+<p>Role</p>
+<ul>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+</ul>
+</div>
+
+<div class="member">
+<div class="img"></div>
+<h3>NAME LNAME</h3>
+<p>Role</p>
+<ul>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+<li>Details</li>
+</ul>
+</div>
 
 </div>
 
+</div>
 
-<script>
-
-function showPage(page){
-
-let sections = document.querySelectorAll(".section");
-
-sections.forEach(section=>{
-section.classList.remove("active");
-});
-
-document.getElementById(page).classList.add("active");
-
-}
+</section>
+</div>
 
 
-const highlight = document.querySelector(".nav-highlight");
-const navLinks = document.querySelectorAll(".nav-left a");
-const nav = document.querySelector(".navbar");
+<div id="rightbar" class="sides">
+    <div class="ads">
+    <div class="outer one" >
+    <div class="header">
+    <button class="red" onclick="closead()">  </button>
+    <button class="yellow"></button>
+    <button class="green"></button>
+    <div class="title">text</div></div>
+    <div class="inner one">
+      <img height="100%" width="100%" src="https://files.catbox.moe/zfiyp9.png" alt="example ads">
+    </div>
+    </div>
+</div>
 
-let activeLink = document.querySelector(".nav-left a.active");
+  <div class="ads">
+    <div class="outer two" >
+    <div class="header">
+    <button class="red" onclick="closead()">  </button>
+    <button class="yellow"></button>
+    <button class="green"></button>
+    <div class="title">text</div></div>
+    <div class="inner two">
+      <img height="100%" width="100%" src="https://files.catbox.moe/idk6ao.png" alt="example ads">
+    </div>
+    </div>
+</div>
 
-/* move highlight */
+  <div class="ads">
+    <div class="outer three" >
+    <div class="header">
+    <button class="red" onclick="closead()">  </button>
+    <button class="yellow"></button>
+    <button class="green"></button>
+    <div class="title">text</div></div>
+    <div class="inner three">
+      <img height="100%" width="100%" src="https://files.catbox.moe/c547gq.png" alt="example ads">
+    </div>
+    </div>
+</div>
+</div>
+</div>
 
-function moveHighlight(link){
 
-const rect = link.getBoundingClientRect();
-const navRect = nav.getBoundingClientRect();
 
-highlight.style.width = rect.width + "px";
-highlight.style.left = (rect.left - navRect.left) + "px";
-highlight.style.top = "20px";
+    
+    
 
-}
 
-/* hover */
-
-navLinks.forEach(link => {
-
-link.addEventListener("mouseenter", () => {
-moveHighlight(link);
-});
-
-link.addEventListener("click", () => {
-
-navLinks.forEach(l => l.classList.remove("active"));
-
-link.classList.add("active");
-activeLink = link;
-
-moveHighlight(link);
-
-});
-
-});
-
-/* leave navbar */
-
-document.querySelector(".nav-left").addEventListener("mouseleave", () => {
-
-if(activeLink){
-moveHighlight(activeLink);
-}
-
-});
-
-/* initialize highlight */
-
-window.addEventListener("load", () => {
-
-if(activeLink){
-moveHighlight(activeLink);
-}
-
-});
-</script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
