@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gazette !!</title>
-    <link rel="icon" type="image/x-icon" href="https://files.catbox.moe/872uti.png" />
-   
-    <script>
-        window.location.hash = "homepage";
-    </script>
-    <script>
-        const fullTitle = "The Gazette !!";
+window.location.hash = "homepage";
+
+const fullTitle = "The Gazette !!";
         let index = 0;
         function typeTitle() {
             if (index <= fullTitle.length) {
@@ -21,499 +11,6 @@
             }
         }
         setInterval(typeTitle, 200);
-    </script>
-
-<style>
-
-
-:root{
---page-bg:#B7CCE6;
---secondary-blue:#5B6B91;
---primary-blue:#181C3E;
---tan:#dcd7cc;
---pink:#FFC7D5;
-}
-
-
-
-@font-face { font-family: 'catfiles'; src: url('https://files.catbox.moe/6sxg9g.ttf') format('TrueType'); }
-@font-face { font-family: 'Reach-Story'; src: url('https://files.catbox.moe/czkr1m.ttf') format('TrueType'); }
-@font-face { font-family: 'porkys'; src: url('https://files.catbox.moe/k3akma.TTF') format('TrueType'); }
-
-
-
-  ::selection {
-  background: transparent;
-  color: var(--pink);
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 0 3px 3px 0;
-}
-
-::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 5px;
-}
-
-
-body{
-margin:0;
-font-family:'Reach-Story';
-background:var(--page-bg);
-color:var(--primary-blue);
-}
-.page{
-width:1200px;
-margin:auto;
-}
-
-/* NAVBAR */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-position:relative;
-}
-
-/* nav links container */
-
-.nav-left{
-position:relative;
-z-index:2;
-}
-
-/* nav links */
-
-.nav-left a{
-margin-right:20px;
-padding:10px 20px;
-font-weight:bold;
-font-family:'catfiles';
-font-size:25px;
-cursor:pointer;
-color:var(--primary-blue);
-text-decoration:none;
-border-radius:20px;
-position:relative;
-}
-
-/* hover text color */
-
-.nav-left a:hover{
-color:var(--tan);
-}
-
-/* active tab text color */
-
-.nav-left a.active{
-color:var(--pink);
-}
-
-/* right side */
-
-.nav-right{
-display:flex;
-align-items:center;
-gap:20px;
-}
-
-.nav-highlight{
-position:absolute;
-height:80px;
-background:var(--primary-blue);
-border-radius:20px;
-
-top:100px;
-left:0;
-width:0;
-
-transition:
-top .35s ease,
-left .35s ease,
-width .35s ease;
-
-z-index:0;
-}
-
-
-.search{
-display:flex;
-align-items:center;
-background:var(--primary-blue);
-color:var(--tan);
-padding:5px 10px;
-border-radius:15px;
-font-family: 'porkys';
-font-size: 20px;
-}
-
-.search input{
-border:none;
-margin-left:10px;
-background:var(--tan);
-border-radius:6px;
-height:20px;
-}
-
-.logo{
-width:100px;
-height:100px;
-border-radius:50%;
-background:var(--tan);
-border:4px solid var(--primary-blue);
-
-position:absolute;
-top:20px;
-right:20px;
-}
-
-/* SECTIONS */
-
-.section{
-display:none;
-}
-
-.section.active{
-display:block;
-}
-
-/* EVENT */
-
-.event{
-background:var(--primary-blue);
-color:var(--tan);
-padding:40px;
-border-radius:25px;
-position:relative;
-
-}
-
-.event h2 {
-  font-family: 'catfiles';
-}
-
-.slider{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-}
-
-.slider div{
-width:70px;
-height:6px;
-background:var(--tan);
-border-radius:5px;
-}
-
-/* NEWS */
-
-.news-section{
-display:flex;
-gap:40px;
-margin-top:40px;
-}
-
-.news-left{
-flex:2;
-}
-
-.news-left h2 {
-  font-family: 'catfiles';
-}
-
-.news-box{
-background:var(--primary-blue);
-color:var(--tan);
-height:150px;
-padding:30px;
-border-radius:20px;
-}
-
-.news-right{
-flex:1;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-
-.side-bar{
-background:var(--primary-blue);
-color:var(--tan);
-padding:30px;
-text-align:center;
-border-radius:25px;
-}
-
-/* ISSUES PAGE */
-
-.issues-container{
-background:var(--primary-blue);
-padding:30px;
-border-radius:25px;
-}
-
-#issues h2 {
-  font-family: 'catfiles';
-  font-size:; 15px;
-}
-
-.featured{
-display:flex;
-gap:20px;
-background:var(--tan);
-padding:20px;
-border-radius:20px;
-margin-bottom:20px;
-}
-
-.featured h1 {
-font-family: 'catfiles';
-font-size:; 25px;  
-}
-
-.featured-img{
-width:190px;
-height:190px;
-background:var(--page-bg);
-border-radius:15px;
-border: 7px solid var(--primary-blue);
-}
-
-.featured-meta{
-display:flex;
-gap:40px;
-margin-top:10px;
-}
-
-.story-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.story-card{
-background:var(--tan);
-padding:10px;
-border-radius:15px;
-display:flex;
-gap:20px;
-align-items:center;
-}
-
-.story-img{
-width:120px;
-height:120px;
-background:var(--page-bg);
-border-radius:10px;
-border: 5px solid var(--primary-blue);
-flex-shrink:0;
-}
-
-/* ARTICLE PAGE */
-
-.article-container{
-background:var(--primary-blue);
-padding:40px;
-border-radius:25px;
-}
-
-.article-box{
-background:var(--tan);
-padding:30px;
-border-radius:20px;
-min-height:400px;
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="page">
-
-<header class="navbar">
-<div class="nav-highlight"></div>
-<div class="nav-left">
-<a class="active" onclick="showPage('home')">Home</a>
-<a onclick="showPage('issues')">All Issues</a>
-<a onclick="showPage('clubs')">Clubs</a>
-<a onclick="showPage('calendar')" >Calendar</a>
-<a onclick="showPage('team')" >Team</a>
-</div>
-
-<div class="nav-right">
-
-<div class="search">
-<span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--tan)"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-   SEARCH</span>
-<input type="text">
-</div>
-
-</div>
-
-</header>
-
-
-<!-- HOME PAGE -->
-
-<section id="home" class="section active">
-
-<div class="event">
-<div class="logo"></div>
-<h2>UPCOMING EVENT</h2>
-<p>Details for event</p>
-
-<div class="slider">
-<div></div>
-<div></div>
-<div></div>
-</div>
-</div>
-
-<div class="news-section">
-
-<div class="news-left">
-<h2>LATEST NEWS</h2>
-
-<div class="news-box">
-<p>
-text
-</p>
-</div>
-</div>
-
-<div class="news-right">
-<div class="side-bar">Something here</div>
-<div class="side-bar">Something here</div>
-<div class="side-bar">Something here</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ALL ISSUES PAGE -->
-
-<section id="issues" class="section">
-
-<div class="issues-container">
-
-<div class="featured">
-
-<div class="featured-img"></div>
-
-<div>
-<h1>Newest story</h1>
-
-<p>
-text
-</p>
-
-<div class="featured-meta">
-<p><b>Date</b></p>
-<p><b>Author</b></p>
-</div>
-
-</div>
-
-</div>
-
-<div class="story-grid">
-
-
-<div class="story-card" onclick="showPage('article')">
-
-<div class="story-img"></div>
-
-<div class="story-info">
-<h2>Story title</h2>
-<p>Date</p>
-<p>Author</p>
-</div>
-
-</div>
-
-<div class="story-card" onclick="showPage('article')">
-
-<div class="story-img"></div>
-
-<div class="story-info">
-<h2>Story title</h2>
-<p>Date</p>
-<p>Author</p>
-</div>
-
-</div>
-
-<div class="story-card" onclick="showPage('article')">
-
-<div class="story-img"></div>
-
-<div class="story-info">
-<h2>Story title</h2>
-<p>Date</p>
-<p>Author</p>
-</div>
-
-</div>
-
-<div class="story-card" onclick="showPage('article')">
-
-<div class="story-img"></div>
-
-<div class="story-info">
-<h2>Story title</h2>
-<p>Date</p>
-<p>Author</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ARTICLE PAGE -->
-
-<section id="article" class="section">
-
-<div class="article-container">
-
-<div class="article-box">
-
-<h1>Article Name</h1>
-
-<p><b>Written by:</b> Author</p>
-<p><b>Date:</b> Date</p>
-
-<p>
-text
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-</div>
-
-
-<script>
 
 function showPage(page){
 
@@ -587,7 +84,105 @@ moveHighlight(activeLink);
 }
 
 });
-</script>
 
-</body>
-</html>
+$( function() {
+    $( ".outer" ).draggable();
+    } );
+    
+    function closead() {
+    const ad = document.querySelector(".ads");
+    ad.style.display = "none";
+}
+/* calendar */
+const datesContainer = document.getElementById("dates");
+const eventList = document.getElementById("event-list");
+const selectedDateText = document.getElementById("selected-date");
+const monthLabel = document.getElementById("month-label");
+const activeDot = document.getElementById("active-dot");
+
+let currentYear = 2026;
+let currentMonth = 3; // April (0 = Jan)
+let selectedDate = 1;
+
+const monthNames = [
+  "Jan","Feb","Mar","Apr","May","Jun",
+  "Jul","Aug","Sep","Oct","Nov","Dec"
+];
+
+/* update left panel */
+function updateLeftPanel(day) {
+  selectedDate = day;
+  selectedDateText.innerText = day;
+}
+
+/* move active dot */
+function moveDot(el) {
+  const parent = document.querySelector(".calendar-base").getBoundingClientRect();
+  const rect = el.getBoundingClientRect();
+
+  activeDot.style.transform =
+    `translate(${rect.left - parent.left}px, ${rect.top - parent.top}px)`;
+}
+
+/* build calendar grid */
+function generateCalendar() {
+  datesContainer.innerHTML = "";
+
+  const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+  monthLabel.innerText = monthNames[currentMonth] + " " + currentYear;
+
+  /* blank spaces before first day */
+  for (let i = 0; i < firstDay; i++) {
+    datesContainer.appendChild(document.createElement("div"));
+  }
+
+  /* actual days */
+  for (let i = 1; i <= daysInMonth; i++) {
+    let day = document.createElement("div");
+    day.classList.add("date");
+    day.innerText = i;
+
+    day.onclick = () => selectDate(i, day);
+
+    datesContainer.appendChild(day);
+  }
+}
+
+/* select a date */
+function selectDate(day, el) {
+  document.querySelectorAll(".date")
+    .forEach(d => d.classList.remove("selected"));
+
+  el.classList.add("selected");
+  updateLeftPanel(day);
+  moveDot(el);
+}
+
+/* change month */
+function changeMonth(step) {
+  currentMonth += step;
+
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+
+  generateCalendar();
+}
+
+/* init calendar on load */
+window.addEventListener("load", () => {
+  generateCalendar();
+
+  const firstDate = document.querySelector(".date");
+  if (firstDate) {
+    selectDate(1, firstDate);
+  }
+});
